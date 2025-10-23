@@ -1,0 +1,6 @@
+Timestamp,Model,Feature_Engineering,Parameter,K-Fold,F1,Accuracy,Recall,Prec,Standard Deviation,Kaggle Score,Author
+10/23/2025 15:18,RandomForestClassifier,scaledData_engineered,"{""random_state"":42}",5,0.7537,0.8204,0.7254,0.7852,0.0282,0.76555,Thang
+10/23/2025 15:20,LogisticRegression,scaledData_engineered,"{""solver"":""lbfgs"",""max_iter"":1000,""random_state"":42}",5,0.713,0.7924,0.6799,0.7509,0.0354,0.75119,Thang
+10/23/2025 15:23,XGBoostClassifier,scaledData_engineered,"{""random_state"":42,""n_estimators"":200,""learning_rate"":0.05,""max_depth"":4,""subsample"":0.8,""colsample_bytree"":0.8}",5,0.7578,0.8215,0.7325,0.7868,0.0216,0.78229,Thang
+10/23/2025 15:24,GradientBoostingClassifier,scaledData_engineered,"{""random_state"":42,""n_estimators"":200,""learning_rate"":0.05,""max_depth"":3,""subsample"":0.8}",5,0.7541,0.8204,0.7239,0.7882,0.0257,0.77033,Thang
+10/23/2025 15:26,CatBoostClassifier,scaledData_engineered,"{""iterations"":300,""learning_rate"":0.05,""depth"":6,""random_seed"":42}",5,0.7482,0.817,0.7143,0.7872,0.0201,0.77751,Thang
