@@ -1,2 +1,0 @@
-Timestamp,Model,Feature_Engineering,Parameter,K-Fold,F1,Accuracy,Recall,Prec,Standard Deviation,Kaggle Score,Author
-2025-10-23 14:06:33,RandomForestClassifier,ageAndPclass_engineered,"{""random_state"":42}",5,0.7538,0.8148,0.7469,0.7632,0.0212,0.73923,Thang
