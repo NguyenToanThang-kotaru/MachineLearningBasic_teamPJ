@@ -1,0 +1,1 @@
+# Folder này dùng để chứa các bài tập thực hành của lab7 liên quan đến mô hình SVM.
