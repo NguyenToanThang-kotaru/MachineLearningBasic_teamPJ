@@ -1,0 +1,2 @@
+Timestamp,Model,Feature_Engineering,Parameter,K-Fold,RMSE,R2,Kaggle Score,Author
+2025-11-14 15:20:26,CatBoostRegressor,TotalSF_drop,"{""loss_function"":""RMSE"",""verbose"":0}",5,27309.0715,0.8714,,Thien
