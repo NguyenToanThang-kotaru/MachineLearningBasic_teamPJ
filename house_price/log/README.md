@@ -1,1 +1,0 @@
-# log folder to add hyperparameters

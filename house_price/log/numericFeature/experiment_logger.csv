@@ -1,0 +1,4 @@
+Timestamp,Model,Feature_Engineering,Parameter,K-Fold,RMSE,R2,Kaggle Score,Author
+11/15/2025 2:27,CatBoostRegressor,numericFeature_drop2features,"{""loss_function"":""RMSE"",""verbose"":0}",5,27802.2551,0.8699,0.13743,Thien
+11/15/2025 2:27,CatBoostRegressor,numericFeature_drop3features,"{""loss_function"":""RMSE"",""verbose"":0}",5,28138.016,0.8658,0.13544,Thien
+11/15/2025 2:30,CatBoostRegressor,numericFeature,"{""loss_function"":""RMSE"",""verbose"":0}",5,28223.5027,0.8615,0.13518,Thien
