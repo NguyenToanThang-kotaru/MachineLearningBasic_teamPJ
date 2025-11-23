@@ -7,7 +7,7 @@ import os
 # Fieldnames cố định, thứ tự ổn định
 FIELDNAMES = [
     "Timestamp", "Model", "Feature_Engineering", "Parameter", "K-Fold",
-    "RMSE", "R2", "Kaggle Score", "Author"
+    "Accuracy", "Precision", "F1", "Recall", "Kaggle Score", "Author"
 ]
 
 def _serialize_params(params):
@@ -23,8 +23,10 @@ def log_experiment(
     feature_name,
     params,
     kfold,
-    rmse,
-    r2,
+    acc,
+    prec,
+    f1,
+    rec,
     author="Unknown",
     kaggle_score=None
 ):
@@ -37,8 +39,10 @@ def log_experiment(
         "Feature_Engineering": feature_name,
         "Parameter": _serialize_params(params),
         "K-Fold": kfold,
-        "RMSE": round(float(rmse), 4) if rmse is not None else "",
-        "R2": round(float(r2), 4) if r2 is not None else "",
+        "Accuracy": round(float(acc), 4) if acc is not None else "",
+        "Precision": round(float(prec), 4) if prec is not None else "",
+        "F1": round(float(f1), 4) if f1 is not None else "",
+        "Recall": round(float(rec), 4) if rec is not None else "",
         "Kaggle Score": kaggle_score or "",
         "Author": author,
     }
