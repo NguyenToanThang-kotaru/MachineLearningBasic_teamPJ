@@ -15,7 +15,7 @@ warnings.filterwarnings('ignore')
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..", "..")))
 from log.experiment_logger import log_experiment
 
-def catboost(*, path_to_log_csv=None, author=None, df=None, df_test=None, name="CatBoostClassifier", name_folder='newFE_folder', name_feature='newFe', save_log=False, save_model=False, save_submission=False):
+def catboost(*, path_to_log_csv=None, author=None, df=None, df_test=None, name="CatBoostClassifier", name_folder='newFE_folder', name_feature='newFe', print_log=True, save_log=False, save_model=False, save_submission=False):
     X = df.drop('Class', axis=1)
     y = df['Class']
     X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -44,19 +44,21 @@ def catboost(*, path_to_log_csv=None, author=None, df=None, df_test=None, name="
         rec_list.append(rec)
         f1_list.append(f1)
         
-        print(f"\n==== Fold {fold_index} results for {name} ====")
-        print(f"Fold {fold_index} -> acc:{acc:.4f} | prec:{prec:.4f} | rec:{rec:.4f} | f1:{f1:.4f}")
+        if print_log:
+            print(f"\n==== Fold {fold_index} results for {name} ====")
+            print(f"Fold {fold_index} -> acc:{acc:.4f} | prec:{prec:.4f} | rec:{rec:.4f} | f1:{f1:.4f}")
         fold_index += 1
         
     mean_acc = np.mean(acc_list)
     mean_prec = np.mean(prec_list)
     mean_f1 = np.mean(f1_list)
     mean_rec = np.mean(rec_list)
-    print("\n==== Mean metrics ====")
-    print(f"Acc: {mean_acc:.4f}")
-    print(f"Prec: {mean_prec:.4f}")
-    print(f"F1: {mean_f1:.4f}")
-    print(f"Rec: {mean_rec:.4f}")
+    if print_log:
+        print("\n==== Mean metrics ====")
+        print(f"Acc: {mean_acc:.4f}")
+        print(f"Prec: {mean_prec:.4f}")
+        print(f"F1: {mean_f1:.4f}")
+        print(f"Rec: {mean_rec:.4f}")
 
     # === Ghi log kết quả vào CSV ===
     if save_log:
@@ -95,6 +97,7 @@ def catboost(*, path_to_log_csv=None, author=None, df=None, df_test=None, name="
             X_test = X_test.drop(columns=['Class'])
 
         y_test_pred = final_model.predict(X_test)
+        y_test_pred = y_test_pred.ravel()
 
         submission = pd.DataFrame({
             'Id': ids,  # đảm bảo test có cột này
