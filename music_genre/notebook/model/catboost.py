@@ -19,7 +19,11 @@ def catboost(*, path_to_log_csv=None, author=None, df=None, df_test=None, name="
     X = df.drop('Class', axis=1)
     y = df['Class']
 <<<<<<< HEAD
+<<<<<<< HEAD
     # X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
+=======
+    X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
+>>>>>>> 503f8857f961fac2ba8fe5f9fae38428207a2d26
 =======
     X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 >>>>>>> 503f8857f961fac2ba8fe5f9fae38428207a2d26
