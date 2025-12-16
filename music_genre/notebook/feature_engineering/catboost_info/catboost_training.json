@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 {"learn":[2.228606517],"iteration":0,"passed_time":0.02661688438,"remaining_time":26.59026749},
 {"learn":[2.106688872],"iteration":1,"passed_time":0.05792013522,"remaining_time":28.90214748},
 {"learn":[2.008314056],"iteration":2,"passed_time":0.08114082277,"remaining_time":26.9658001},
@@ -1005,6 +1006,8 @@
 {"learn":[0.6364167734],"iteration":998,"passed_time":23.36645328,"remaining_time":0.02338984313},
 {"learn":[0.6360689578],"iteration":999,"passed_time":23.39125007,"remaining_time":0}
 =======
+=======
+>>>>>>> 503f8857f961fac2ba8fe5f9fae38428207a2d26
 =======
 >>>>>>> 503f8857f961fac2ba8fe5f9fae38428207a2d26
 =======
@@ -2011,6 +2014,9 @@
 {"learn":[0.6300776598],"iteration":999,"passed_time":15.99435493,"remaining_time":0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 503f8857f961fac2ba8fe5f9fae38428207a2d26
+=======
 >>>>>>> 503f8857f961fac2ba8fe5f9fae38428207a2d26
 =======
 >>>>>>> 503f8857f961fac2ba8fe5f9fae38428207a2d26
